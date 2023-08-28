@@ -2,7 +2,7 @@ const apiKey = "f7ffa778a53e9b302477b2aca06c6283"
 const apiURL = "https://api.openweathermap.org/data/2.5/weather"
 const searchBox = document.querySelector(".search input")
 const searchBtn = document.querySelector(".search button")
-var currentCity= "jakarta"
+
 const clientLocalTime = new Date()
 const splittedLocalTime = (clientLocalTime.toString()).split(" ")
 const currentHourArray = splittedLocalTime[4].split(":")
@@ -83,7 +83,7 @@ function setWeatherIcon(weather){
 
 function checkTimeAndSetBackground(time)
 {
-    if(time > 18)
+    if(time >= 18)
     {
        
         document.querySelector(".card").style.background = 
